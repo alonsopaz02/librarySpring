@@ -1,7 +1,11 @@
 package com.library.libraryapi.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public class BookRepository extends JpaRepository<Book,Int> {
-    
+import com.library.libraryapi.model.BookModel;
+
+@Repository
+public interface BookRepository extends CrudRepository<BookModel,Long> {
+     
 }
